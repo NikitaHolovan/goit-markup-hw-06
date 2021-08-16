@@ -16,6 +16,7 @@
   --modal-primary-bgc: rgba(0, 0, 0, 0.2);
   --overlay-portfolio: rgba(33, 150, 243, 0.9);
   --about-bgc: rgba(47, 48, 58, 0.8);
+  --placeholder-modal: rgba(117, 117, 117, 0.5);
 }
 body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -228,6 +229,7 @@ a {
 .primary-button {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  min-width: 200px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -236,6 +238,7 @@ a {
   padding: 10px 32px;
   display: block;
   margin: 0 auto;
+  letter-spacing: 0.06em;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -266,7 +269,7 @@ a {
   min-height: 581px;
   top: 50%;
   left: 50%;
-  padding: 50px;
+  padding: 40px;
   transform: translate(-50%, -50%) scale(1);
   background-color: var(--primary-white-color);
   border-radius: 4px;
@@ -288,6 +291,105 @@ a {
   align-items: center;
   background-color: var(--primary-white-color);
 }
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-input {
+  margin: 4px 0 10px 0;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 40px;
+  width: 100%;
+  padding-left: 42px;
+}
+input:focus,
+textarea:focus {
+  border: 1px solid var(--accent-color);
+  outline: none;
+}
+input:focus + svg {
+  fill: var(--accent-color);
+}
+.form-input {
+  position: relative;
+}
+.modal-svg {
+  position: absolute;
+  left: 12px;
+  top: 33px;
+}
+
+/* .modal-input:nth-last-of-type(1) {
+  margin-bottom: 20px;
+} */
+textarea.modal-input {
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+  margin-bottom: 20px;
+}
+textarea.modal-input::placeholder {
+  color: var(--placeholder-modal);
+}
+
+.modal-checkbox {
+  position: absolute;
+  appearance: none;
+  opacity: 0;
+}
+.modal-agreement {
+  display: flex;
+  align-items: center;
+}
+.checkbox-icon {
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../images/icons/icon_checkbox.svg);
+}
+.modal-checkbox:checked + .checkbox-icon {
+  background-image: url(../images/icons/icon_check.svg);
+}
+.modal-checkbox:checked . .modal-form label {
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color);
+}
+.modal-form label.modal-agreement {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  margin-left: 7px;
+  color: var(--secondary-text-color);
+}
+.heading-modal {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: initial;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  margin-bottom: 12px;
+}
+.form-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.checkbox-link {
+  text-decoration: underline;
+  color: var(--accent-color);
+  margin-left: 4px;
+}
+
 /* Benefits Section*/
 .section-benefits {
   padding: 94px 0 47px 0;
@@ -595,6 +697,40 @@ a {
 .studio-social:hover svg,
 .studio-social:focus svg {
   fill: var(--primary-white-color);
+}
+
+/* Footer modal */
+.modal-footer {
+  display: ;
+}
+.modal-modal {
+  display: flex;
+  justify-content: right;
+}
+.modal-modal .button {
+  display: flex;
+  align-items: center;
+}
+
+.modal-footer .footer-heading {
+  margin-left: 93px;
+}
+.footer-email {
+  margin-left: 93px;
+  width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--primary-white-color);
+}
+.button-svg {
+  margin-left: 10px;
+}
+.modal-footer .button {
+  margin-left: 12px;
 }
 
 /*Portfolio*/
