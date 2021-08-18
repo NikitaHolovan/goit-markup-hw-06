@@ -67,18 +67,16 @@
         </button>
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
-            <h2 class="heading-modal">
-              Оставьте свои данные, мы вам перезвоним
-            </h2>
+            <p class="heading-modal">Оставьте свои данные, мы вам перезвоним</p>
             <form class="modal-form">
-              <div class="form-input">
+              <div class="form-group">
                 <label class="form-label" for="name">Имя</label>
                 <input class="modal-input" name="name" type="text" id="name" />
                 <svg class="modal-svg" width="18px" height="18px">
                   <use href="./images/icons/icons.svg#icon-person-modal"></use>
                 </svg>
               </div>
-              <div class="form-input">
+              <div class="form-group">
                 <label class="form-label" for="tel">Телефон</label>
                 <input class="modal-input" name="tel" type="tel" id="tel" />
                 <svg class="modal-svg" width="18px" height="18px">
@@ -86,7 +84,7 @@
                 </svg>
               </div>
 
-              <div class="form-input">
+              <div class="form-group">
                 <label class="form-label" for="email">Почта</label>
                 <input
                   class="modal-input"
@@ -99,7 +97,7 @@
                 </svg>
               </div>
 
-              <div class="form-input">
+              <div class="form-group">
                 <label class="form-label" for="text">Комментарий</label>
                 <textarea
                   class="modal-input"
@@ -119,9 +117,10 @@
                     id="agreement"
                   />
                   <span class="checkbox-icon"></span>
-                  Соглашаюсь с рассылкой и принимаю
-                  <a class="checkbox-link" href="">Условия договора</a></label
-                >
+                  <span class="checkbox-text">
+                    Соглашаюсь с рассылкой и принимаю
+                    <a class="checkbox-link" href="">Условия договора</a></label>
+                  </span>
               </div>
               <button type="submit" class="primary-button button">
                 Отправить
