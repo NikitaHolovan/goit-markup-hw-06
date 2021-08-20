@@ -305,13 +305,13 @@ a {
   height: 40px;
   width: 100%;
   padding: 0 20px 0 42px;
+  outline: none;
 }
 input:focus,
 input:hover,
 textarea:hover,
 textarea:focus {
   border: 1px solid var(--accent-color);
-  outline: none;
 }
 input:focus + svg,
 input:hover + svg {
@@ -320,6 +320,9 @@ input:hover + svg {
 .form-group {
   position: relative;
   margin-bottom: 10px;
+}
+.form-group-comment {
+  margin-bottom: 20px;
 }
 .form-label {
   font-size: 12px;
@@ -392,7 +395,7 @@ textarea.modal-input::placeholder {
   color: var(--primary-text-color);
   margin-bottom: 12px;
 }
-.form-field {
+.form-group-checkbox {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -734,6 +737,7 @@ textarea.modal-input::placeholder {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  outline: none;
   background-color: transparent;
   color: var(--primary-white-color);
 }
